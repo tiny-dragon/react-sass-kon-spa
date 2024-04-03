@@ -1,0 +1,48 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - yarn install
+    - cd functions && yarn install
+  artifacts:
+    paths:
+      - build/
+      - node_modules/
+      - functions/node_modules/
+
+deploy_dev:
+  stage: deploy
+  before_script:
+    - REACT_APP_VERSION=$CI_COMMIT_SHA yarn build:dev
+  script:
+    - yarn global add firebase-tools
+    - firebase use konch-dev-90dd4 --token $FIREBASE_DEPLOY_KEY
+    - firebase deploy -m 'Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID' --non-interactive --token $FIREBASE_DEPLOY_KEY
+  retry: 2
+  environment:
+    name: dev
+    url: https://dev.app.konch.ai
+  only:
+    - development
+
+deploy_prod:
+  stage: deploy
+  before_script:
+    - REACT_APP_VERSION=$CI_COMMIT_SHA yarn build:prod
+  script:
+    - yarn global add firebase-tools
+    - firebase use konch-d78ab --token $FIREBASE_DEPLOY_KEY
+    - REACT_APP_VERSION=$CI_COMMIT_SHA yarn build:prod
+    - firebase deploy -m 'Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID' --non-interactive --token $FIREBASE_DEPLOY_KEY
+  retry: 2
+  environment:
+    name: prod
+    url: https://app.konch.ai
+  only:
+    - master
+  when: manual

@@ -1,0 +1,21 @@
+{
+  "name": "konch-www-functions",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://dev.app.konch.ai",
+  "dependencies": {
+    "cors": "^2.8.1",
+    "firebase-admin": "^5.9.1",
+    "firebase-functions": "^0.8.2",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "scripts": {
+    "serve:prod": "firebase serve --only functions --project konch-d78ab",
+    "serve:dev": "firebase serve --only functions --project konch-dev-90dd4",
+    "serve:local": "API=local firebase serve --only functions --project konch-dev-90dd4"
+  },
+  "devDependencies": {},
+  "description": "function to help manage site",
+  "main": "index.js"
+}

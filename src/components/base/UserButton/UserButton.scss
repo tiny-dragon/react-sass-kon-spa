@@ -1,0 +1,73 @@
+@import 'utils';
+
+.user-button {
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s ease-in;
+  cursor: pointer;
+  
+  background: #5172e6;
+  color: #ffffff;
+  
+
+  @include hover() {
+    background: #7790e9;
+  }
+  &:active {
+    background: #214eeb;
+  }
+
+  &[disabled] {
+    background: #555;
+    color: #CCC;
+    cursor: wait;
+  }
+  .text {
+    font-size: 20px;
+    font-family: 'Lato-Bold';
+  }  
+
+  &.dashboard-plus {
+    padding: 10px 20px;
+    .text {
+      font-size: 16px;
+      font-family: 'Lato-Regular';
+      color: black;
+    }
+  }
+  &.search {
+    padding: 20px;
+    padding-right: 0px;
+    width: 235px;
+    .icon {
+      margin-left: 15px;
+      margin-right: 30px;
+      img {
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: 26px;
+      }
+    }
+  }
+  @include media("<medium") {
+    &.search {
+      width: 100%;
+      margin-top: 10px;
+      justify-content: space-between;
+
+      .icon {
+        img {
+          display: block;
+          position: absolute;
+          top: 75px;
+          right: 25px;
+        }
+      }
+
+    }
+  }
+}

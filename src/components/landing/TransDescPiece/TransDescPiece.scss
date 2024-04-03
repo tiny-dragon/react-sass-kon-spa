@@ -1,0 +1,122 @@
+@import 'utils';
+
+.trans-desc-panel {
+  width: 315px;
+  position: relative;
+  @include media("<medium") {
+    width: 80%;
+  }
+  &.mb {
+    margin-bottom: 45px;
+    &.mb.last {
+      margin-bottom: 0px;
+    }
+  }
+  &.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.center.spiece {
+    display: block;    
+    padding-top: 94px;
+    margin-bottom: 20px;
+  }
+  
+
+  @include media("<medium") {
+    &.center {
+      align-items: center;
+      width: 100%;
+      grid-row: 2;
+      text-align: center;
+    }
+    &.center.spiece {
+      padding-top: 0px;
+      text-align: center;
+      .badge-cnt {
+        justify-content: center;
+      }
+    }
+    &.up-in-mobile {
+      top: 0px !important;
+    }
+  }
+
+  .desc-title {
+    color: rgb(39, 49, 60);
+    font-size: 22px;
+    font-family: 'Lato-Bold';
+    margin-bottom: 18px;
+    line-height: 32px;
+  }
+  @include media("<medium") {
+    .desc-title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  .desc-cnt {
+    color: rgb(137, 137, 137);
+    font-size: 17px;
+    line-height: 24px;
+  }
+  
+  .desc-emph {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row;
+    line-height: 24px;
+    color: rgb(199, 89, 118);
+
+    .emph-border {
+      margin-top: 16px;
+      margin-right: 8px;
+      border: 2px solid rgb(199, 89, 118);
+      width: 60px;
+      height: 3px;
+    }
+  }
+  @include media("<medium") {
+    .desc-emph {
+      display: none;
+    }
+  }
+  .badge-cnt {
+    display: flex;
+    color: rgb(9, 9, 9);
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 24px;
+
+    @include media("<medium") {
+      & {
+        display: none;
+      }
+    }
+
+    .badge-header {
+      margin-right: 8px;
+    }
+
+    .badge {
+      width: 39px;
+      height: 24px;
+      border-radius: 12px;
+      background-color: #7cbb91;
+      text-align: center;
+      color: #ffffff;
+      font-size: 11px;
+      line-height: 23px;
+      font-weight: bold;
+    }
+    .badge-tailer {
+      margin-left: 7px;
+      span {
+        color: #7cbb91;
+        font-weight: bold;
+      }
+    }
+  }
+}

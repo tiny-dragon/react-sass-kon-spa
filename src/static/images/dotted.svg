@@ -1,0 +1,17 @@
+<svg width="594px" height="171px" viewBox="0 0 594 171" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M845.283203,169.283203 C760.468099,169.283203 728.371098,209.563833 748.9922,290.125092 C779.923852,410.96698 778.894488,599.766477 759.153543,640.905531 C739.412597,682.044585 703.333054,745.254459 728.821606,754.575985 C754.310159,763.897512 768.90636,742.872421 759.153543,725.352161 C749.400725,707.831902 740.052872,716.107296 676.134766,715.297852" id="path-1"></path>
+        <filter x="-1.5%" y="-0.4%" width="104.7%" height="101.4%" filterUnits="objectBoundingBox" id="filter-2">
+        </filter>
+    </defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="4" opacity="0.544893569">
+        <g id="home" transform="translate(-465.000000, -380.000000)">
+            <g id="dotted_curved_line" transform="translate(760.708984, 463.074219) scale(-1, 1) rotate(-270.000000) translate(-760.708984, -463.074219) ">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

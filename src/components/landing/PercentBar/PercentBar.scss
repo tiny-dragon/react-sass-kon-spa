@@ -1,0 +1,32 @@
+@import 'utils';
+
+.percent-bar {
+  height: 32px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+
+  & > div {
+    height: 100%;
+    border-radius: 16px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 17px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.4);
+    @include material-shadow(1);
+  }
+
+  @include media("<medium") {
+    & > div {
+      font-size: 12px;
+      padding-right: 10px;
+    }
+  }
+  @include media("<small") {
+    & > div {
+      font-size: 10px;
+      padding-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import 'utils';
+
+.intro-panel {
+  color: rgb(39, 49, 60);
+  text-align: center;
+  margin-top: 72px;
+
+  @include media("<medium") {
+    & {
+      margin-top: 102px;
+    }
+  }
+
+  h1 {
+    line-height: 44px;
+    font-family: 'Lato-Bold';
+  }
+  p {
+    font-size: 18px;
+    line-height: 32px;    
+  }
+
+  .intros {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 36px;
+
+    a {
+      width: 50%;
+      margin-top: 50px;
+      padding: 0px 30px;
+      cursor: auto;
+
+      /*
+      &:hover {
+        @include material-shadow(2);
+      }
+      */
+
+      .intro-card {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        align-items: center;
+        transition: all .3s ease-in-out;
+        // cursor: pointer;
+
+        .intro-icon-wrapper {
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          /* background-color: #27313b; */
+          background-size: 60px;
+          background-repeat: no-repeat;
+        }
+        .cloud {
+          background-image: url('../../../static/images/icon_cloud.png');
+        }
+        .whiteout {
+          background-image: url('../../../static/images/icon_whiteout.png');
+        }
+        .ml {
+          background-image: url('../../../static/images/icon_ml.png');
+        }
+        .search {
+          background-image: url('../../../static/images/icon_search.png');
+        }
+        .intro-name {
+          font-size: 22px;
+          color: rgb(39, 49, 60);
+          font-family: 'Lato-Bold';
+          margin-top: 8px;
+        }
+        .intro-desc {
+          font-size: 17px;
+          line-height: 24px;
+          color: #9e9e9e;
+          margin-top: 24px;
+          
+        }
+      }
+    }
+
+    @include media("<medium") {
+      a {
+        width: 100%;
+      }
+    }
+  }
+
+  .create-btn-wrapper {
+    width: 230px;
+    margin: auto;
+    margin-top: 90px;
+  }
+}

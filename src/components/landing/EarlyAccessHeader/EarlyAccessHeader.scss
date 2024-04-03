@@ -1,0 +1,19 @@
+@import 'utils';
+
+.product-hunt {
+  background: url('../../../static/images/product_hunt.svg') no-repeat;
+  height: 250px;
+  width: 250px;
+  background-size: 100%;
+  position: absolute;
+  left: -84px;
+  -webkit-filter: drop-shadow(1px 5px 1px rgba(10, 10, 10, 0.2));
+  filter: drop-shadow(1px 5px 1px rgba(10, 10, 10, 0.2));
+  top: 7px;
+}
+
+@include media("<medium") {
+    .product-hunt {
+      background: none;
+    }
+  }

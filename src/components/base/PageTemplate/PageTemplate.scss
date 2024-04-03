@@ -1,0 +1,26 @@
+@import 'utils';
+
+.page-template {
+  background: url('../../../static/images/header.png') no-repeat;
+  
+  background-size: 100% 100%;
+  width: 100%;
+  height: 656px;
+  opacity: 1;
+
+  &.tall {
+    height: 756px;
+  }
+  
+  &.sdu {
+    background: none;
+    height: auto;
+  }
+
+  @include media("<medium") {
+    & {
+      background: #27313c;
+      height: 570px;
+    }
+  }
+}

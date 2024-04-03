@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "konch-dev-90dd4",
+    "prod": "konch-d78ab"
+  }
+}

@@ -1,0 +1,19 @@
+@import 'utils';
+
+.page-intro {  
+  text-align: center;
+  color: #FFFFFF;
+  position: relative;
+  h1 {
+    font-family: 'Lato-Bold';
+    font-size: 32px;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 32px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(170, 170, 170);
+  }
+}
